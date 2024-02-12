@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatBot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <!-- ... (previous head content) ... -->
+    <script src="https://cdn.jsdelivr.net/npm/emoji-picker-element"></script>
+
+</head>
+<body>
+
+    <header>
+        <nav>
+            <h2 id="logo">ChatBot</h2>
+            <h2 id="menu">Account</h2>
+        </nav>
+    </header>
+
+    <section id="show-messages">
+        <ul id="chat-box">
+            <li class="message-bot"><span class="material-symbols-outlined">smart_toy</span><p>Hi there!<br>How can I help you today?</p></li>
+            <li class="messagge-input"> </li>
+            <!-- Chat messages will be displayed here -->
+        </ul>
+    </section>
+
+    <section id="write-message">
+        <div class="input-container">
+            <input type="text" id="user-input" class="user-input" placeholder="Type your message...">
+            <button class="send-button"><span class="material-symbols-outlined">send</span></button>
+        </div>
+    </section>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+</html>
+
+
