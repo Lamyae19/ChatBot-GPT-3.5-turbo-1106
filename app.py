@@ -2,7 +2,7 @@ from flask import Flask, render_template, request
 import openai
 
 # Initialize the OpenAI API client
-openai.api_key = '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'
+openai.api_key = "YOUR API KEY"
 
 # Set up Flask app
 app = Flask(__name__)
@@ -20,6 +20,7 @@ def index():
 @app.route("/chatbot", methods=["POST"])
 def chatbot():
     prompt = request.json['user_input']
+
     conversation_history.append({"role": "user", "content": prompt})
     completion = openai.ChatCompletion.create(
         model="gpt-3.5-turbo-1106",
@@ -39,7 +40,7 @@ def chatbot():
         return 'Failed to Generate response!'
 
 
-
 # Start the Flask app
 if __name__ == "__main__":
-    app.run(debug=False,host="0.0.0.0")
+    app.run(debug=True)
+
