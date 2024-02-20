@@ -15,14 +15,20 @@
     <header>
         <nav>
             <h2 id="logo">ChatBot</h2>
-            <h2 id="menu">Account</h2>
+
+           <!-- <h2 id="menu">Account</h2> -->
         </nav>
     </header>
 
     <section id="show-messages">
         <ul id="chat-box">
-            <li class="message-bot"><span class="material-symbols-outlined">smart_toy</span><p>Hi there!<br>How can I help you today?</p></li>
-            <li class="messagge-input"> </li>
+            <li class="message-bot">
+                <span class="material-symbols-outlined">smart_toy</span>
+                <div class="message-bot-show">
+                    <p>Hi there!<br>How can I help you today?</p></li>
+                </div>
+
+
             <!-- Chat messages will be displayed here -->
         </ul>
     </section>
@@ -32,6 +38,10 @@
             <input type="text" id="user-input" class="user-input" placeholder="Type your message...">
             <button class="send-button"><span class="material-symbols-outlined">send</span></button>
         </div>
+
+    </section>
+    <section id="footer">
+        <p>Copyright © 2024 Lamyae Chouinna</p>
     </section>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 
