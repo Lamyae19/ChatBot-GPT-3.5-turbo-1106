@@ -12,14 +12,14 @@ body {
 
 header {
     background-color: white;
-    padding: 20px;
+    padding: 18px;
     text-align: center;
 }
 
 #logo{
     /*color: aliceblue;*/
     color:#84ADEA;
-    font-size: 30px;
+    font-size: 34px;
 }
 
 #show-messages {
@@ -58,7 +58,7 @@ ul {
     padding: 10px 15px;
     border-radius: 20px;
     display: inline-block;
-    max-width: 75%;
+    max-width: 60%;
 }
 .message-bot .message-bot-show pre{
 

@@ -7,7 +7,7 @@ function highlightAll() {
 }
 
 // Call the highlightAll function at regular intervals
-// setInterval(highlightAll, 1000);
+setInterval(highlightAll, 1000);
 
 const chatBox = document.querySelector("#chat-box");
 const messageInput = document.querySelector(".user-input");
@@ -47,13 +47,10 @@ function sendMessage() {
         // Check if the content has code block
         const hasCodeBlock = content.includes("```");
         if (hasCodeBlock) {
-
-
               // If the content has code block, wrap it in a <pre><code> element"'rtk
               content = content.replaceAll("<" , "&lt").replaceAll("> ","&gt")
               const codeContent1 = content.replace(/```([\s\S]+?)```/g, '</p><pre><code>$1</code></pre><p>');
-              //let arr =  codeContent1.split("")
-              //<script>for (let k in arr ){console.WRITES(arr[k])}</script>
+
               messageLi.innerHTML = `<span class="material-symbols-outlined">smart_toy</span><div class="message-bot-show"><p>${codeContent1}</p></div>`
 
             }
